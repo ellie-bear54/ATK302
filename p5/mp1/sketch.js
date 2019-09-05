@@ -43,7 +43,6 @@ function draw() {
   fill(255, 219, 172);
   rect(650, 555, 35, 140);
 
-
   //leye
   fill(96, 115, 153);
 ellipse(620, 200, 10, 10);
