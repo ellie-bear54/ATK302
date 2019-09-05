@@ -1,4 +1,5 @@
- //let value = 207, 197, 205;
+let value = (207, 197, 205);
+
 function setup() {
   // put setup code here
   createCanvas(windowWidth, windowHeight);
@@ -7,8 +8,6 @@ function setup() {
 
 function draw() {
   // put drawing code here
-
-
 
   //hair2
   fill(244, 242, 201);
@@ -23,16 +22,12 @@ function draw() {
   rect(630, 250, 20, 5);
 
   // body
-  fill(207, 197, 205);
+  fill(value);
   rect(575, 255, 130, 300, 20);
-
-
 
   // larm
   fill(255, 219, 172);
   rect(535, 255, 40, 160, 20);
-
-
 
   //rarm
   fill(255, 219, 172);
@@ -62,54 +57,11 @@ fill(244, 242, 201);
   rect(560, 125, 160, 60, 20);
 
 }
+
 function mousePressed() {
-  if (value = (207, 197, 205)) {
-    value = 0;
-  } else {
-    value = (207, 197, 205);
-  }
+if (value === (207, 197, 205)) {
+  value = 0;
+} else {
+  value = (207, 197, 205);
 }
-// function mousePressed() {
-//   if (value = (207, 197, 205)) {
-//     value = 0;
-//   } else {
-//     value = (207, 197, 205);
-//   }
-// }
-// function mousePressed() {
-//   if (value = (207, 197, 205)) {
-//     value = 0;
-//   } else {
-//     value = (207, 197, 205);
-//   }
-// }
-// function mousePressed() {
-//   if (value = (207, 197, 205)) {
-//     value = 0;
-//   } else {
-//     value = (207, 197, 205);
-//   }
-// }
-// function mousePressed() {
-//   if (value = (207, 197, 205)) {
-//     value = 0;
-//   } else {
-//     value = (207, 197, 205);
-//   }
-// }
-
-// Click within the image to change
-// the value of the rectangle
-
-
-// function draw() {
-//   fill(value);
-//   rect(25, 25, 50, 50);
-// }
-// function mousePressed() {
-//   if (value === (207, 197, 205)) {
-//     value = 0;
-//   } else {
-//     value = (207, 197, 205);
-//   }
-// }
+}
