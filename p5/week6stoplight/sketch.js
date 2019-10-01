@@ -1,7 +1,7 @@
 //case 0 = green light on
 //case 1 = yellow light on
 //case 2= red light on
-var turtle;
+var turtle = 0;
 
 function setup() {
   createCanvas(1000, 1000);

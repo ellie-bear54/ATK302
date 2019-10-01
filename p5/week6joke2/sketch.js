@@ -1,6 +1,5 @@
-
 var nom = 0;
-var timer = 20;
+var timer = 200;
 
 function setup() {
   // put setup code here
@@ -10,29 +9,30 @@ function setup() {
 
 function draw() {
   // put drawing code here
-switch (nom) {
+  switch (nom) {
 
-case 0:
-background("orange");
+    case 0:
+      background("orange");
 
-text("Even people who are good for nothing have the capacity to bring a smile to your face", 100, 100);
+      text("Even people who are good for nothing have the capacity to bring a smile to your face", 100, 100);
 
-break;
+      break;
 
-case 1:
-background("gray");
+    case 1:
+      background("gray");
 
-text("For instance, when you push them down the stairs", 100, 100);
+      text("For instance, when you push them down the stairs", 100, 100);
 
-break;
+      break;
 
-}
-}
+  }
 
 
-timer--;
-if (timer < 0) {
-nom = nom + 1;
-timer = 20;
 
+  timer--;
+  if (timer < 0) {
+    nom = nom + 1;
+    timer = 200;
+
+  }
 }
