@@ -1,6 +1,6 @@
 
 var nom = 0;
-var time = 20;
+var timer = 20;
 
 function setup() {
   // put setup code here
@@ -30,9 +30,9 @@ break;
 }
 
 
-time--;
-if (time <= 0) {
+timer--;
+if (timer < 0) {
 nom = nom + 1;
-time = 20;
+timer = 20;
 
 }
