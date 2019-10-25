@@ -5,13 +5,14 @@ var humans = [];
 var vrothanoPos;
 var vrothano;
 var runFont;
+var clap;
 
 
 
 function setup() {
 
   createCanvas(1300, 800);
-
+  clap = loadSound('assets/winning_sound.wav');
   human = loadImage('assets/forlizgame.png');
   // humans[0] = loadImage('assets/forlizgame.png');
   // humans[1] = loadImage('assets/forlizgame.png');
@@ -48,20 +49,27 @@ function draw() {
 
       game();
       clock++;
-      if (clock > 500) {
-        start = 3;
+      if (clock > 1500) {
+        start = 4;
         clock = 0;
       }
       break;
 
-    case 2: // the win state
+    case 3: // the win state
       background('black');
       fill(138, 28, 39)
       textSize(runFont, 50);
       text('Yay!', 200, 200);
+
       break;
 
-    case 3: // the lose state
+    case 2:
+      clap.play();
+      start = 3;
+      break;
+
+
+    case 4: // the lose state
       background('black');
       fill(138, 28, 39);
       textSize(runFont, 50);
@@ -78,12 +86,14 @@ function mouseReleased() {
       start = 1;
       break;
 
-    case 2:
+    case 3:
       resetTheGame();
       start = 0;
+      clap.pause();
+      clap.loop();
       break;
 
-    case 3:
+    case 4:
       resetTheGame();
       start = 0;
       break;
@@ -94,7 +104,7 @@ function mouseReleased() {
 function Tenebris() {
   // attributes
   this.pos = createVector(100, 100);
-  this.vel = createVector(random(-5, 5), random(-5, 5));
+  this.vel = createVector(random(-5, 10), random(-5, 10));
 
   this.clock = 0;
   this.maxClock = random(10, 30); //use this for timer code
@@ -146,7 +156,7 @@ function game() {
   for (var i = 0; i < humans.length; i++) {
     humans[i].display();
     humans[i].drive();
-    if (humans[i].pos.dist(vrothanoPos) < 50) {
+    if (humans[i].pos.dist(vrothanoPos) < 100) {
       humans.splice(i, 1);
     }
   }
