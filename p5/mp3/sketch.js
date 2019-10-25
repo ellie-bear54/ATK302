@@ -1,5 +1,6 @@
 var start = 0;
 var clock = 0;
+var human;
 var humans = [];
 var vrothanoPos;
 var vrothano;
@@ -10,18 +11,19 @@ function setup() {
 
   createCanvas(1300, 800);
 
+  human = loadImage('assets/forlizgame.png');
+  humans[0] = loadImage('assets/forlizgame.png');
+  humans[1] = loadImage('assets/forlizgame.png');
+
+  vrothano = loadImage('assets/Crawler.png');
+
   //spawn humans!!!
   for (var i = 0; i < 5; i++) {
     humans.push(new Tenebris());
   }
 
-vrothano = loadImage('assets/Crawler.png');
+runFont = loadFont('assets/run_font/Run_Demo.otf');
 
-runFont = loadFont('assets/run_font/Run!_Demo.otf');
-
-human = loadImage('assets/forlizgame.png');
-humans[0] = loadImage('assets.forlizgame.png');
-humans[1] = loadImage('assets.forlizgame.png');
 
   vrothanoPos = createVector(width / 2, height - 100);
   rectMode(CENTER);
