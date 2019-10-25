@@ -65,6 +65,7 @@ function draw() {
 
     case 2:
       clap.play();
+      clap.loop();
       start = 3;
       break;
 
@@ -90,7 +91,7 @@ function mouseReleased() {
       resetTheGame();
       start = 0;
       clap.pause();
-      clap.loop();
+
       break;
 
     case 4:
