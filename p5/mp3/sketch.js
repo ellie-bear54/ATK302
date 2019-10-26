@@ -65,7 +65,6 @@ function draw() {
 
     case 2:
       clap.play();
-      
       start = 3;
       break;
 
